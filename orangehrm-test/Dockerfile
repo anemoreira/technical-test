@@ -25,9 +25,9 @@ RUN pip install --no-cache-dir --upgrade pip && \
     rfbrowser init && \
     npx playwright install-deps
 
-ENV BASE_URL=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-ENV ADMIN_USER=Admin
-ENV ADMIN_PASS=admin123
+ENV BASE_URL=
+ENV ADMIN_USER=
+ENV ADMIN_PASS=
 ENV HEADLESS=True
 
 CMD ["robot", "-d", "robot/reports", "robot/tests"]
