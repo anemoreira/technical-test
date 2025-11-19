@@ -16,9 +16,15 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: List project structure
+        run: |
+          echo "Verificando estrutura do repositório:"
+          ls -R .
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -39,6 +45,7 @@ jobs:
         run: |
           rfbrowser init
           npx playwright install-deps
+          npx playwright install
 
       - name: Run Robot tests
         run: |
@@ -48,3 +55,9 @@ jobs:
             --variable ADMIN_PASS:${{ env.ADMIN_PASS }} \
             --variable HEADLESS:${{ env.HEADLESS }} \
             -d robot/reports robot/tests
+
+      - name: Upload Robot reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-reports
+          path: robot/reports
