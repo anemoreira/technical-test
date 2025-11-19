@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-11-18T22:09:22.768791" rpa="false" schemaversion="5">
+<suite id="s1" name="AdminUserCRUD" source="C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\robot\tests\AdminUserCRUD.robot">
+<kw name="Suite Setup Keyword" owner="Common" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-18T22:09:23.138125" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\C\u00edceraAdejaneMoreira\\Downloads\\orangehrm-test-suite-master\\orangehrm-test-suite-master\\robot\\reports\\browser\\traces\\temp\\7d4d6b01-5bc7-440b-8f99-4fa7082be608"}</msg>
+<msg time="2025-11-18T22:09:23.186013" level="INFO">Starting Browser process C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:64252</msg>
+<msg time="2025-11-18T22:09:24.394956" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\CíceraAdejaneMoreira\\Downloads\\orangehrm-test-suite-master\\orangehrm-test-suite-master\\robot\\reports\\browser\\traces\\temp\\7d4d6b01-5bc7-440b-8f99-4fa7082be608"}</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-18T22:09:23.137280" elapsed="1.257923"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-11-18T22:09:24.397449" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-11-18T22:09:24.412333" level="INFO">Successfully created context. </msg>
+<msg time="2025-11-18T22:09:24.412413" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-11-18T22:09:24.395519" elapsed="0.016999"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-18T22:09:25.990316" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-18T22:09:24.412971" elapsed="1.577534"/>
+</kw>
+<status status="PASS" start="2025-11-18T22:09:23.136560" elapsed="2.854095"/>
+</kw>
+<test id="s1-t1" name="Admin: Add, Edit and Delete User" line="13">
+<kw name="Test Setup Keyword" owner="Common" type="SETUP">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2025-11-18T22:09:25.999050" elapsed="0.000169"/>
+</kw>
+<status status="PASS" start="2025-11-18T22:09:25.998640" elapsed="0.000648"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-18T22:09:25.999747" level="INFO">${rand} = 36927</msg>
+<var>${rand}</var>
+<arg>__import__('random').randint(10000,99999)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-18T22:09:25.999533" elapsed="0.000237"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-18T22:09:26.000238" level="INFO">${username} = user36927</msg>
+<var>${username}</var>
+<arg>user${rand}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-18T22:09:26.000018" elapsed="0.000241"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-18T22:09:26.000617" level="INFO">${password} = Passw0rd*</msg>
+<var>${password}</var>
+<arg>Passw0rd*</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-18T22:09:26.000465" elapsed="0.000178"/>
+</kw>
+<kw name="Given Admin Is Logged In" owner="LoginPage">
+<kw name="Given Open Login Page" owner="LoginPage">
+<kw name="Go To" owner="Browser">
+<msg time="2025-11-18T22:09:26.387358" level="INFO">Successfully opened URL https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-11-18T22:09:26.001235" elapsed="0.386266"/>
+</kw>
+<status status="PASS" start="2025-11-18T22:09:26.001071" elapsed="0.386534"/>
+</kw>
+<kw name="Given Login As Admin" owner="LoginPage">
+<kw name="Fill Text With Wait" owner="Common">
+<kw>
+<msg time="2025-11-18T22:09:26.389722" level="FAIL">Keyword name cannot be empty.</msg>
+<var>${selector}</var>
+<var>${text}</var>
+<status status="FAIL" start="2025-11-18T22:09:26.389482" elapsed="0.000334">Keyword name cannot be empty.</status>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${selector}</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-11-18T22:09:26.390075" elapsed="0.000217"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-11-18T22:09:26.390473" elapsed="0.000086"/>
+</kw>
+<arg>${LOGIN_USERNAME}</arg>
+<arg>${ADMIN_USER}</arg>
+<status status="FAIL" start="2025-11-18T22:09:26.388785" elapsed="0.001953">Keyword name cannot be empty.</status>
+</kw>
+<kw name="Fill Text With Wait" owner="Common">
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${ADMIN_PASS}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.390958" elapsed="0.000321"/>
+</kw>
+<kw name="Click With Wait" owner="Common">
+<arg>${LOGIN_SUBMIT}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.391810" elapsed="0.000217"/>
+</kw>
+<kw name="Expect Visible" owner="Common">
+<arg>${ADMIN_MENU}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.392286" elapsed="0.000147"/>
+</kw>
+<status status="FAIL" start="2025-11-18T22:09:26.387952" elapsed="0.004787">Keyword name cannot be empty.</status>
+</kw>
+<status status="FAIL" start="2025-11-18T22:09:26.000848" elapsed="0.392088">Keyword name cannot be empty.</status>
+</kw>
+<kw name="When Open User Management" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.393571" elapsed="0.000301"/>
+</kw>
+<kw name="When Click Add User" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.394446" elapsed="0.000236"/>
+</kw>
+<kw name="When Select User Role" owner="AdminPage">
+<arg>ESS</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.395124" elapsed="0.000157"/>
+</kw>
+<kw name="When Select Status" owner="AdminPage">
+<arg>Enabled</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.395728" elapsed="0.000438"/>
+</kw>
+<kw name="When Type Employee Name" owner="AdminPage">
+<arg>Peter Mac Anderson</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.398655" elapsed="0.001791"/>
+</kw>
+<kw name="When Pick Employee From Hint" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.401742" elapsed="0.000495"/>
+</kw>
+<kw name="When Set Admin Username" owner="AdminPage">
+<arg>${username}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.403857" elapsed="0.000851"/>
+</kw>
+<kw name="When Set Passwords" owner="AdminPage">
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.406236" elapsed="0.000282"/>
+</kw>
+<kw name="Then Save And Expect Success" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.407096" elapsed="0.000217"/>
+</kw>
+<kw name="When Open User Management" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.407794" elapsed="0.000205"/>
+</kw>
+<kw name="When Open Edit For Username" owner="AdminPage">
+<arg>${username}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.408350" elapsed="0.000157"/>
+</kw>
+<kw name="When Select Status" owner="AdminPage">
+<arg>Disabled</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.408846" elapsed="0.000164"/>
+</kw>
+<kw name="Then Save And Expect Success" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.409380" elapsed="0.000113"/>
+</kw>
+<kw name="When Open User Management" owner="AdminPage">
+<status status="NOT RUN" start="2025-11-18T22:09:26.409963" elapsed="0.000135"/>
+</kw>
+<kw name="When Delete Username" owner="AdminPage">
+<arg>${username}</arg>
+<status status="NOT RUN" start="2025-11-18T22:09:26.410398" elapsed="0.000119"/>
+</kw>
+<kw name="Test Teardown Keyword" owner="Common" type="TEARDOWN">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-11-18T22:09:26.467512" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;img alt="screenshot" class="robot-seleniumlibrary-screenshot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXIQEAIBAAsRf0bwsGQw9ua7F19h0AAAD43RoAAAAIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYYAAAKBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASBBgYoH3HgAAAElJREFUAAAAEgQYAACABAEGAAAgQYABAABIEGAAAAASBBgAAIAEAQYAACBBgAEAAEgQYAAAABIEGAAAgAQBBgAAIEGAAQAASHgAAAD//5+IUxIAAAAGSURBVAMAxz8OJ0lGh5kAAAAASUVORK5CYII=" width="900px"/&gt;</msg>
+<arg>filename=EMBED</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-11-18T22:09:26.412428" elapsed="0.055738"/>
+</kw>
+<arg>"${TEST STATUS}"!="PASS"</arg>
+<arg>Take Screenshot</arg>
+<arg>filename=EMBED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-18T22:09:26.411775" elapsed="0.056519"/>
+</kw>
+<status status="PASS" start="2025-11-18T22:09:26.411112" elapsed="0.057248"/>
+</kw>
+<doc>Create a user, edit its status, and delete it in Admin.</doc>
+<tag>admin</tag>
+<tag>crud</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-11-18T22:09:25.990765" elapsed="0.477784">Keyword name cannot be empty.</status>
+</test>
+<kw name="Suite Teardown Keyword" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-11-18T22:09:26.620810" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-18T22:09:26.479514" elapsed="0.141578"/>
+</kw>
+<status status="PASS" start="2025-11-18T22:09:26.479067" elapsed="0.142174"/>
+</kw>
+<status status="FAIL" start="2025-11-18T22:09:22.771167" elapsed="3.850134"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">admin</stat>
+<stat pass="0" fail="1" skip="0">crud</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="AdminUserCRUD" id="s1" pass="0" fail="1" skip="0">AdminUserCRUD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

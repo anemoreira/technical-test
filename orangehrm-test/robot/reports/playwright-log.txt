@@ -1,0 +1,46 @@
+{"level":30,"time":"2025-11-19T01:09:23.961Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Listening on 127.0.0.1:64252"}
+{"level":30,"time":"2025-11-19T01:09:24.243Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-11-19T01:09:24.391Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-11-19T01:09:24.392Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-11-19T01:09:24.392Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-11-19T01:09:24.399Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-11-19T01:09:24.399Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-11-19T01:09:24.399Z","pid":19924,"hostname":"FORLOGIC1247","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@15de1c0e226d2ee140c03dea14b1376a\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=9419aa5f-9e19-4e54-b737-d4cc098787fe\"}"}
+{"level":30,"time":"2025-11-19T01:09:24.399Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Trace file: "}
+{"level":30,"time":"2025-11-19T01:09:24.409Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Setting default timeout for context context=29790090-632a-45c8-98ab-29180ab3dde0 to 10000"}
+{"level":30,"time":"2025-11-19T01:09:24.409Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Changed active context: context=29790090-632a-45c8-98ab-29180ab3dde0"}
+{"level":30,"time":"2025-11-19T01:09:24.409Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method newContext"}
+{"level":30,"time":"2025-11-19T01:09:24.420Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-11-19T01:09:24.420Z","pid":19924,"hostname":"FORLOGIC1247","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@15de1c0e226d2ee140c03dea14b1376a\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=29790090-632a-45c8-98ab-29180ab3dde0\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@95854272b2019c5c2e892c4105aa6dd9\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=9419aa5f-9e19-4e54-b737-d4cc098787fe\"}"}
+{"level":30,"time":"2025-11-19T01:09:24.520Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Video path: undefined"}
+{"level":30,"time":"2025-11-19T01:09:24.520Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Changed active page"}
+{"level":30,"time":"2025-11-19T01:09:25.988Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method newPage"}
+{"level":30,"time":"2025-11-19T01:09:25.991Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-19T01:09:25.996Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-19T01:09:26.001Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method goTo"}
+{"level":30,"time":"2025-11-19T01:09:26.385Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method goTo"}
+{"level":30,"time":"2025-11-19T01:09:26.415Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-11-19T01:09:26.415Z","pid":19924,"hostname":"FORLOGIC1247","Take screenshot with options: ":{"path":"C:\\Users\\CíceraAdejaneMoreira\\Downloads\\orangehrm-test-suite-master\\orangehrm-test-suite-master\\robot\\reports\\browser\\screenshot\\9845afa141eb43b69dcea94c20885177.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-11-19T01:09:26.464Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-11-19T01:09:26.472Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-19T01:09:26.475Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-19T01:09:26.485Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-11-19T01:09:26.492Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Removed page=aad555e1-ecdf-4da5-8208-69dece4134f3 from context=29790090-632a-45c8-98ab-29180ab3dde0 page stack"}
+{"level":30,"time":"2025-11-19T01:09:26.619Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\CíceraAdejaneMoreira\Downloads\orangehrm-test-suite-master\orangehrm-test-suite-master\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-19T01:09:26.625Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-19T01:09:26.625Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-19T01:09:26.700Z","pid":19924,"hostname":"FORLOGIC1247","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-11-19T01:09:26.700Z","pid":19924,"hostname":"FORLOGIC1247","msg":"End of node method closeAllBrowsers"}
