@@ -23,7 +23,8 @@ jobs:
 
       - name: List project structure
         run: |
-          echo "Verificando estrutura do repositório:"
+          echo "Estrutura atual do projeto:"
+          pwd
           ls -R .
 
       - name: Setup Python
@@ -47,6 +48,9 @@ jobs:
           npx playwright install-deps
           npx playwright install
 
+      - name: Create reports directory
+        run: mkdir -p orangehrm-test/robot/reports
+
       - name: Run Robot tests
         run: |
           robot \
@@ -54,10 +58,11 @@ jobs:
             --variable ADMIN_USER:${{ env.ADMIN_USER }} \
             --variable ADMIN_PASS:${{ env.ADMIN_PASS }} \
             --variable HEADLESS:${{ env.HEADLESS }} \
-            -d robot/reports robot/tests
+            -d orangehrm-test/robot/reports \
+            orangehrm-test/robot/tests
 
       - name: Upload Robot reports
         uses: actions/upload-artifact@v4
         with:
           name: robot-reports
-          path: robot/reports
+          path: orangehrm-test/robot/reports
