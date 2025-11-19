@@ -10,13 +10,6 @@ Automação de testes web do OrangeHRM utilizando Robot Framework e Robot Framew
 - `robot/resources/pages/`: Page Objects com Given/When/Then
 - `robot/tests/`: suítes de teste (`AdminTests.robot`, `AdminUserCRUD.robot`)
 
-## Variáveis de Ambiente
-
-- `BASE_URL` (default: `https://opensource-demo.orangehrmlive.com/web/index.php/auth/login`)
-- `ADMIN_USER` (default: `Admin`)
-- `ADMIN_PASS` (default: `admin123`)
-- `HEADLESS` (default: `True`)
-
 ### Sobrescrever via CLI
 
 ```bash
