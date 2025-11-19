@@ -1,0 +1,50 @@
+name: Robot CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  BASE_URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  ADMIN_USER: Admin
+  ADMIN_PASS: admin123
+  HEADLESS: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install robotframework robotframework-browser
+
+      - name: Init Robot Framework Browser
+        run: |
+          rfbrowser init
+          npx playwright install-deps
+
+      - name: Run Robot tests
+        run: |
+          robot \
+            --variable BASE_URL:${{ env.BASE_URL }} \
+            --variable ADMIN_USER:${{ env.ADMIN_USER }} \
+            --variable ADMIN_PASS:${{ env.ADMIN_PASS }} \
+            --variable HEADLESS:${{ env.HEADLESS }} \
+            -d robot/reports robot/tests
